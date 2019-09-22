@@ -14,14 +14,14 @@ wc=$(cat $tmpdir | wc | awk {'print $1'})
 
 if [ $1 = "report" ]; then
         tail -n +$(expr $wc / 100 \* 5 + 1) $2
+        rm -rf $2
         exit
 fi
 
 if [ $1 = "95" ]; then
         sed -n $(expr $wc / 100 \* 5 + 1)p $2 | awk {'print $3'}
+        rm -rf $2
         exit
 fi
-
-rm -rf $2
 
 echo "Invalid Argument"
