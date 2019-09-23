@@ -8,7 +8,6 @@ month=$(date -d "$nowmonth-15 last month" '+%m')
 year=$(date -d "$nowmonth-15 last month" '+%Y')
 currmonth=$(date +%m)
 curryear=$(date +%Y)
-touch /tmp/lastmonth-$2
 LASTMONTH=/tmp/lastmonth-$2
 CURRENTMONTH=/tmp/currentmonth-$2
 
