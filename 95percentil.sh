@@ -20,7 +20,7 @@ if [ $1 = "report" ]; then
         exit
 fi
 
-if [ $1 = "95" ]; then
+if [ $1 = "fullreport" ]; then
         sed -n $(expr $wc / 100 \* 5 + 1)p $LASTMONTH | awk {'print $3'}
         exit
 fi
